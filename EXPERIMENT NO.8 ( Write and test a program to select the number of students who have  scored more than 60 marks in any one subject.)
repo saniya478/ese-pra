@@ -1,0 +1,48 @@
+JAVA CODE 
+
+
+class Student {
+    String name;
+    int rollNo;
+    int subject1, subject2, subject3;
+
+    public Student(int rollNo, String name, int s1, int s2, int s3) {
+        this.rollNo = rollNo;
+        this.name = name;
+        this.subject1 = s1;
+        this.subject2 = s2;
+        this.subject3 = s3;
+    }
+
+    public boolean hasScoredMoreThan60() {
+        return subject1 > 60 || subject2 > 60 || subject3 > 60;
+    }
+}
+
+public class StudentMarksFilter {
+    public static void main(String[] args) {
+        // Sample data of 10 students
+        Student[] students = {
+                new Student(1, "Alice", 55, 62, 49),
+                new Student(2, "Bob", 40, 58, 45),
+                new Student(3, "Charlie", 61, 70, 66),
+                new Student(4, "David", 35, 40, 59),
+                new Student(5, "Eva", 65, 35, 40),
+                new Student(6, "Frank", 48, 49, 50),
+                new Student(7, "Grace", 72, 60, 55),
+                new Student(8, "Henry", 59, 63, 42),
+                new Student(9, "Ivy", 47, 53, 68),
+                new Student(10, "Jack", 55, 44, 33)
+        };
+
+        int count = 0;
+
+        for (Student student : students) {
+            if (student.hasScoredMoreThan60()) {
+                count++;
+            }
+        }
+
+        System.out.println("Number of students who scored more than 60 in any subject: " + count);
+    }
+}
