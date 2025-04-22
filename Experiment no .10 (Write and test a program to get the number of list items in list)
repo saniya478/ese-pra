@@ -1,0 +1,35 @@
+JAVA CODE 
+
+import java.util.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+
+public class TestComboBox
+ 
+{ 
+	
+public static void main(String args[])
+ 	
+{
+        
+System.setProperty("webdriver.gecko.driver","E:\\soft\\software testing\\Mozilla Driver\\geckodriver.exe");
+        
+WebDriver driver = new FirefoxDriver();
+       
+ driver.get("https://www.facebook.com");
+        
+Select se = new Select(driver.findElement(By.xpath("//Select[@id='month']")));
+       
+List <WebElement> mylist = se.getOptions();
+        
+mylist.size();
+        
+System.out.println("Number of items = "+mylist.size());
+ 	
+}
+
+}
