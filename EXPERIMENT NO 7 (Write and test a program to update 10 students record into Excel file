@@ -1,0 +1,75 @@
+Dependancy
+
+<dependencies>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi</artifactId>
+        <version>5.2.3</version>
+    </dependency>
+    <dependency>
+        <groupId>org.apache.poi</groupId>
+        <artifactId>poi-ooxml</artifactId>
+        <version>5.2.3</version>
+    </dependency>
+</dependencies>
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JAVA CODE 
+
+import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+public class StudentExcelUpdater {
+
+    public static void main(String[] args) {
+        String[] columns = {"ID", "Name", "Grade"};
+
+        // Sample 10 student records
+        String[][] students = {
+                {"1", "Alice", "A"},
+                {"2", "Bob", "B"},
+                {"3", "Charlie", "A"},
+                {"4", "David", "C"},
+                {"5", "Eva", "B"},
+                {"6", "Frank", "A"},
+                {"7", "Grace", "B"},
+                {"8", "Henry", "C"},
+                {"9", "Ivy", "A"},
+                {"10", "Jack", "B"}
+        };
+
+        Workbook workbook = new XSSFWorkbook();
+        Sheet sheet = workbook.createSheet("Student Records");
+
+        // Create header row
+        Row headerRow = sheet.createRow(0);
+        for (int i = 0; i < columns.length; i++) {
+            Cell cell = headerRow.createCell(i);
+            cell.setCellValue(columns[i]);
+        }
+
+        // Write student data
+        for (int i = 0; i < students.length; i++) {
+            Row row = sheet.createRow(i + 1); // Start from second row
+            for (int j = 0; j < students[i].length; j++) {
+                row.createCell(j).setCellValue(students[i][j]);
+            }
+        }
+
+        // Resize columns to fit content
+        for (int i = 0; i < columns.length; i++) {
+            sheet.autoSizeColumn(i);
+        }
+
+        // Write the output to a file
+        try (FileOutputStream fileOut = new FileOutputStream("StudentRecords.xlsx")) {
+            workbook.write(fileOut);
+            System.out.println("Excel file created successfully!");
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+}
