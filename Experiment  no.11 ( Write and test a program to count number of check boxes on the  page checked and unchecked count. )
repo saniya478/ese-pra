@@ -1,0 +1,68 @@
+HTML CODE 
+
+<!DOCTYPE html>
+<html>
+<body>
+<form>
+<h2>Text Input</h2>
+  First name:<br>
+<input type="text" name="firstname">
+<br>
+  Last name:<br>
+<input type="text" name="lastname">
+<br>
+<h2>Select Gender</h2>
+
+<input type="radio" name="gender" value="male" checked> Male<br>
+<input type="radio" name="gender" value="female"> Female<br>
+<input type="radio" name="gender" value="other"> Other<br>
+
+<h2>Select Languages Known</h2>
+<input type="checkbox" name="lang" value="Java"> Java<br>
+<input type="checkbox" name="lang" value="PHP" checked="checked"> PHP<br>
+<input type="checkbox" name="lang" value="C#"> C#<br>
+<input type="checkbox" name="lang" value="Python" checked="checked"> Python<br>
+<input type="checkbox" name="lang" value="Ruby"> Ruby<br>
+<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+JAVA CODE
+
+import java.util.*;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+ class TestCheckBoxes
+ { 
+	public static void main(String args[])
+ 	{
+        System.setProperty("webdriver.gecko.driver","E:\\soft\\software testing\\Mozilla Driver\\geckodriver.exe");
+        WebDriver driver = new FirefoxDriver();
+        driver.get("file:///C:/Users/Admin/Desktop/reg.html");
+        int chk = 0;
+        int unchk = 0;
+        List <WebElement> els = driver.findElements(By.xpath("//input[@type='radio']"));
+        for(WebElement el : els)
+        {
+        	if(el.isSelected()) {
+        		chk++;
+        	}
+        	else{
+        		unchk++;
+        	}
+        	
+        }
+        System.out.println("Total checked items" + chk);
+    	System.out.println("Total unchecked items" + unchk);
+ 	}
+ }
