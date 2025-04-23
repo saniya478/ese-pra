@@ -46,3 +46,53 @@ public class StudentMarksFilter {
         System.out.println("Number of students who scored more than 60 in any subject: " + count);
     }
 }
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JAVASCRIPT CODE 
+
+const students = [
+  { name: "Alice", math: 58, science: 61, english: 55 },
+  { name: "Bob", math: 72, science: 45, english: 65 },
+  { name: "Charlie", math: 50, science: 52, english: 49 },
+  { name: "David", math: 35, science: 70, english: 60 },
+  { name: "Eve", math: 62, science: 66, english: 77 },
+  { name: "Frank", math: 40, science: 45, english: 30 },
+  { name: "Grace", math: 59, science: 61, english: 62 },
+  { name: "Heidi", math: 60, science: 60, english: 59 },
+  { name: "Ivan", math: 61, science: 63, english: 55 },
+  { name: "Judy", math: 55, science: 50, english: 45 }
+];
+
+let count = 0;
+
+for (let student of students) {
+  if (student.math > 60 || student.science > 60 || student.english > 60) {
+    count++;
+  }
+}
+
+console.log("Number of students who scored more than 60 in any one subject:", count);
+
+
+
+
+terminal command 
+
+node students.js
+
+
+
+Show Names of Students-------
+
+
+let count = 0;
+
+console.log("Students who scored > 60 in any subject:");
+for (let student of students) {
+  if (student.math > 60 || student.science > 60 || student.english > 60) {
+    console.log(student.name);
+    count++;
+  }
+}
+console.log("Total count:", count);
