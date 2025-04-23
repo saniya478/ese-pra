@@ -48,3 +48,44 @@ public class TestComboBox {
         driver.quit();
     }
 }
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JAVASCRIPT CODE 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Combo Box Item Count</title>
+</head>
+<body>
+
+    <h2>Select Your Country</h2>
+
+    <!-- Combo box / List box -->
+    <select id="countryList">
+        <option value="india">India</option>
+        <option value="usa">USA</option>
+        <option value="uk">UK</option>
+        <option value="australia">Australia</option>
+        <option value="canada">Canada</option>
+    </select>
+
+    <br><br>
+    <button onclick="countItems()">Get Number of Items</button>
+
+    <p id="result"></p>
+
+    <script>
+        function countItems() {
+            const comboBox = document.getElementById("countryList");
+            const totalItems = comboBox.length;
+            document.getElementById("result").innerText = 
+                "Total items in combo box: " + totalItems;
+        }
+    </script>
+
+</body>
+</html>
+
