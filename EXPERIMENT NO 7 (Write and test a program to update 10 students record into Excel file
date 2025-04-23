@@ -73,3 +73,61 @@ public class StudentExcelUpdater {
         }
     }
 }
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+JAVACSRIPT 
+
+const XLSX = require('xlsx');
+const fs = require('fs');
+
+// 10 student records
+const students = [
+    { ID: 1, Name: "Alice", Grade: "A" },
+    { ID: 2, Name: "Bob", Grade: "B" },
+    { ID: 3, Name: "Charlie", Grade: "C" },
+    { ID: 4, Name: "David", Grade: "A" },
+    { ID: 5, Name: "Eve", Grade: "B" },
+    { ID: 6, Name: "Frank", Grade: "C" },
+    { ID: 7, Name: "Grace", Grade: "A" },
+    { ID: 8, Name: "Heidi", Grade: "B" },
+    { ID: 9, Name: "Ivan", Grade: "C" },
+    { ID: 10, Name: "Judy", Grade: "A" }
+];
+
+// Convert student data to worksheet
+const worksheet = XLSX.utils.json_to_sheet(students);
+
+// Create a new workbook and append worksheet
+const workbook = XLSX.utils.book_new();
+XLSX.utils.book_append_sheet(workbook, worksheet, "Students");
+
+// Write to Excel file
+XLSX.writeFile(workbook, "Students.xlsx");
+
+console.log("Excel file 'Students.xlsx' created successfully.");
+
+
+WRITE A COMMAND IN VSCODE TERMINAL
+
+✅ Option 1: Using VS Code (Recommended)
+Open your project folder in VS Code.
+
+Go to Terminal > New Terminal (or press Ctrl + `).
+
+In the terminal at the bottom, run the commands like:
+
+bash
+
+mkdir student-excel
+cd student-excel
+npm init -y
+npm install xlsx
+Then create the writeStudents.js file inside that folder and paste the JavaScript code
+
+
+To run your JS file:
+
+node writeStudents.js
+
