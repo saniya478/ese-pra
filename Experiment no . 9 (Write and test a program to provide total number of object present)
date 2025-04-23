@@ -28,3 +28,42 @@ public class TestLinks {
     }
 }
 
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+HTML CODE 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Count Page Objects</title>
+</head>
+<body>
+
+    <h1>Welcome</h1>
+    <p>This is a paragraph.</p>
+    <img src="https://via.placeholder.com/100" alt="Image">
+    <div>Sample Div</div>
+    <input type="text" placeholder="Enter name">
+    <button>Click Me</button>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+
+
+
+
+JAVASCRIPT CODE  
+
+// Count all objects/elements on the page
+window.onload = function () {
+    const allObjects = document.getElementsByTagName("*"); // selects all elements
+    alert("Total number of objects on the page: " + allObjects.length);
+    console.log("Total objects found:", allObjects.length);
+}
+
+
+
+
