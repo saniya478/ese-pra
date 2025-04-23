@@ -1,0 +1,67 @@
+Defect
+Descriptio
+Steps to Severi Priorit
+Expected Actual
+Stat
+Module
+Reproduc
+ty
+Result
+Result
+US
+internation] al transactio ins
+internatio nal bank account
+3. Initiate a payment|
+4. Submit
+complete an successfu unknown
+세
+error
+OTP not received during login for certain users
+Critical High
+1. Log in
+OTP is
+with a
+sent to
+Authenticati registered
+OTP is not Ope Backend
+the user's
+on
+account
+received
+Team
+2. Wait for|
+registere d numberl
+OTP
+Account locked
+DEFO after valid 03
+OTP
+verificatio
+Critical High
+1. Log in
+Authenticati 2. Enter on
+valid OTP
+3. Submit
+User is
+Account
+redirecte gets d to the locked
+dashboar unexpecte d
+dly
+Applicatio in crashes on adding High a payment method
+High
+Payments
+1. Log in
+2. Go to payment
+Payment
+methods method
+Applicatio|Ope Frontend
+3. Add a
+is added
+In crashes n
+Team|
+new
+successfu
+payment lly method
+4. Submit|
+Transactio n history
+1. Log in
+Transacti Page
