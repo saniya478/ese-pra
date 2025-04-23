@@ -74,3 +74,58 @@ class TestCheckBoxes {
         driver.quit();
     }
 }
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+JAVASRIPT 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkbox Count</title>
+</head>
+<body>
+    <h2>Select Your Subjects</h2>
+
+    <!-- Sample checkboxes -->
+    <input type="checkbox" name="subject" value="Math"> Math<br>
+    <input type="checkbox" name="subject" value="Science"> Science<br>
+    <input type="checkbox" name="subject" value="English"> English<br>
+    <input type="checkbox" name="subject" value="History"> History<br>
+    <input type="checkbox" name="subject" value="Geography"> Geography<br>
+
+    <!-- Button to trigger count -->
+    <br>
+    <button onclick="countCheckboxes()">Count Checked and Unchecked</button>
+
+    <!-- Area to display results -->
+    <p id="result"></p>
+
+    <!-- JavaScript Code -->
+    <script>
+        function countCheckboxes() {
+            // Get all checkboxes
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+            let checkedCount = 0;
+            let uncheckedCount = 0;
+
+            // Count checked and unchecked
+            checkboxes.forEach((box) => {
+                if (box.checked) {
+                    checkedCount++;
+                } else {
+                    uncheckedCount++;
+                }
+            });
+
+            // Display result
+            document.getElementById('result').innerHTML =
+                `Checked: ${checkedCount}<br>Unchecked: ${uncheckedCount}`;
+        }
+    </script>
+</body>
+</html>
+
