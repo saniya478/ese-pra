@@ -1,0 +1,119 @@
+
+case iD
+
+
+
+
+
+
+TEST ID --ITC 001
+TEST CASE DESCRIPTION --Verify the  login screen will appear after click on login page
+PREDICTIONS---Enter the correct URL
+TEST STEPS --1. Enter the valid URL
+2.Click the URL
+
+EXPECTED RESULT--Login screen will be appear!
+ACTUAL RESULT --Login screen appeared
+STATUS --Pass
+TC OOZ
+Enter a valid username & valid password
+Valid URL Test data
+1.Enter Valid Email
+2.Enter valid password
+3. Click on login
+Button
+Successful login
+Successful login
+Pass
+TO 003
+Enter a valid username & invalid password
+Valid URL Test data
+1.Enter Valid Email
+2.Enter invalid password
+3.Click on login
+Button
+Error message
+Error message "Invalid passworditi
+Pass
+TC 004
+Enter a invalid username
+Valid URL Test data
+1.Enter invalid Email
+2.Click on next Button
+Enor message
+Error message "Invalid email"
+Pass
+TC 005
+When user open the login page the cursor should remain in the email text box
+Enter the correct URL & check the email text box
+1. Enter the valid URL
+2. Click the URL
+Cursor should be in the email text box
+Cursor should be in the email text box
+Pass
+TC 006
+should be displayi
+Verify after click on the next button password field Provide correct email and filed should be display should be
+click on next buttoni
+1. Enter email
+2.Click on next button
+3. Verify password
+05 not
+Password field
+displayed
+Password field should be displayed
+Pass
+TC 007.
+Verify the error message should be display after entering invalid email format
+Enter invalid syntax for email
+1. Enter invalid email:
+address
+2.Click on nekt button.
+Errori message
+Error message "Invalid email"
+Pass
+
+Verify after click on next button password filed is disable or not
+Click the correct button & 1.Click next button check the password text box
+2.Click the password filed box
+Password field should be displayed
+Password field should be displayed
+Pass
+TC 003
+TC 009
+Verify whether eve icon is added to the password field or not
+check the password field
+1 Click next button
+Click the correct button & 2.Check the password Password should filed eye icon
+be visiblel
+Password should be visible
+Pass
+
+Verify the error message should display after
+Enter invalid syntax for password
+1.Enter Valid Email
+2. Enter invalid password
+3.Click on login
+Button
+Error messagel
+Error message
+Pass
+TO 010
+entering the invalid password
+Verify after click on forgot emall link is disable or
+Click the fornot email link
+1. Enter the valid URL
+2. Click the forgot email link
+Successfully forgat email link opened
+Successfully forgot email link opened
+Pass
+TC 011
+TC 012
+not/
+Verify after click on forgot password linkis disable or not
+Click the forgot password
+1. Enter the valid URL
+2. Click the forgot password link
+Successfully forgot password link openedi
+Successfully forgot password link opened
+Pass
